@@ -23,9 +23,12 @@ This repo aims to **reproduce Fig. 2 and Fig. 3** from:
 - **`QM_n4.f90`** – Standard exact QM approach for small systems (e.g. 4 nuclei).  
   Builds explicit operator matrices and propagates with matrix algebra.
 
-- **`SC_n16.f90`** – **Semiclassical** dynamics.  
+- **`SC_n16.f90`** – **Manolopoulos-Hore Improved Semiclassical** dynamics.  
   Cost grows **linearly** with number of nuclei (vs **exponential** for exact QM).  
   Typically faster than QM for **≥12 nuclei**; coherent oscillations become less prominent as N increases.
+  
+- **`SW_n16.f90`** – **Schulten-Wolynes Semiclassical** dynamics.  
+  Closed form expression, but fails to capture the correct long-time behaviour of the electron spin dynamics. 
 
 ---
 
