@@ -16,18 +16,18 @@ This repo aims to **reproduce Fig. 2 and Fig. 3** from:
 
 ## Files
 
-- **`QM_nN_fast.f90`** – Fastest and most memory-efficient exact QM simulation.  
+- **`QM_nN_fast.f90`** – Fastest and most memory-efficient exact QM dynamics.  
   Needed for large systems (e.g. **16 nuclei**); avoids explicit dense matrices.  
   The Hilbert space for 16 nuclei + 1 electron is **2^17 = 131072** dimensions, which exceeds typical memory without efficient algorithms.
 
 - **`QM_n4.f90`** – Standard exact QM approach for small systems (e.g. 4 nuclei).  
   Builds explicit operator matrices and propagates with matrix algebra.
 
-- **`SC_n16.f90`** – **Manolopoulos-Hore Improved Semiclassical** dynamics.  
+- **`SC_n16.f90`** – **Manolopoulos-Hore** improved semiclassical dynamics.  
   Cost grows **linearly** with number of nuclei (vs **exponential** for exact QM).  
   Typically faster than QM for **≥12 nuclei**; coherent oscillations become less prominent as N increases.
   
-- **`SW_n16.f90`** – **Schulten-Wolynes Semiclassical** dynamics.  
+- **`SW_n16.f90`** – **Schulten-Wolynes** semiclassical dynamics.  
   Closed form expression, but fails to capture the correct long-time behaviour of the electron spin dynamics. 
 
 ---
