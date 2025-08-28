@@ -38,7 +38,7 @@ You’ll need a recent Fortran compiler with OpenMP (e.g. **gfortran 14+**).
 gfortran -O2 -std=f2023 -fopenmp -o QM_nN_fast QM_nN_fast.f90
 
 # Exact QM (small N, educational)
-gfortran -O2 -std=f2023 -fopenmp -o QM_n4 QM_n4.f90
+gfortran -O2 -std=f2023 -o QM_n4 QM_n4.f90
 
 # Semiclassical
-gfortran -O2 -std=f2023 -fopenmp -o SC_n16 SC_n16.f90
+gfortran -O2 -std=f2023 -o SC_n16 SC_n16.f90
