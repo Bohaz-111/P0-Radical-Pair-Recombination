@@ -10,7 +10,7 @@ program QM_nN_fast
   integer,  parameter :: NSTEPS = 300
   real(dp), parameter :: T_END  = 30.0_dp
   real(dp), parameter :: dt     = T_END / NSTEPS
-  real(dp), parameter :: omega  = 0.0_dp
+  real(dp), parameter :: omega  = 0.5_dp
   integer,  parameter :: m_stages = 4              
   real(dp), parameter :: acoef(m_stages) = [ &
        0.5153528374311229_dp, -0.08578201941297365_dp, &
