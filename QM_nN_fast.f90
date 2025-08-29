@@ -7,7 +7,7 @@ program QM_nN_fast
 
   integer,  parameter :: n_spins = 16
   integer,  parameter :: D = 2**(n_spins + 1)       
-  integer,  parameter :: NSTEPS = 300
+  integer,  parameter :: NSTEPS = 3000
   real(dp), parameter :: T_END  = 30.0_dp
   real(dp), parameter :: dt     = T_END / NSTEPS
   real(dp), parameter :: omega  = 0.5_dp
